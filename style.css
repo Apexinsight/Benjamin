@@ -77,7 +77,7 @@ nav ul li a:hover {
     color: white;
     /* Static Image with a dark professional overlay */
     background: linear-gradient(rgba(0, 31, 63, 0.7), rgba(0, 31, 63, 0.7)), 
-                url('assets/hero-bg.jpg') no-repeat center center/cover;
+                url('images/hero-bg.jpg') no-repeat center center/cover;
 }
 
 .profile-img {
@@ -226,4 +226,5 @@ footer {
     #hero { height: auto; padding: 6rem 1rem; }
     .btn.secondary { margin-left: 0; margin-top: 15px; }
     .section-title { font-size: 1.8rem; }
+
 }
