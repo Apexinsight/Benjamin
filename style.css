@@ -642,3 +642,59 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+/* --- Professional Memberships Ribbon --- */
+.membership-ribbon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    border-bottom: 4px solid var(--secondary);
+    gap: 20px;
+}
+
+.membership-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+}
+
+.membership-item:hover {
+    transform: translateY(-5px);
+}
+
+.membership-item i {
+    font-size: 2rem;
+    color: var(--secondary);
+    background: rgba(176, 141, 87, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.membership-info h4 {
+    font-size: 1rem;
+    color: var(--primary);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.membership-info p {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* --- Mobile Fix for Ribbon --- */
+@media (max-width: 900px) {
+    .membership-ribbon {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 30px;
+    }
+}
