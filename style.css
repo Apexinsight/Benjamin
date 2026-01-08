@@ -228,3 +228,81 @@ footer {
     .section-title { font-size: 1.8rem; }
 
 }
+/* --- Navigation Desktop Basics --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #002147;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- Mobile Styles (Screens smaller than 768px) --- */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #002147;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when "active" class is added */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+#scrollTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Place it at the bottom */
+    right: 20px; /* Place it on the right */
+    z-index: 99; /* Make sure it stays on top */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #C5A059; /* Dr. Abongo's Gold accent color */
+    color: white; /* Arrow color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 50%; /* Make it circular */
+    font-size: 18px; /* Increase font size */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background-color: #002147; /* Changes to Navy Blue on hover */
+    transform: scale(1.1);
+}
+
